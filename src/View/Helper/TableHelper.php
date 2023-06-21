@@ -49,9 +49,20 @@
 			}
 			$options = json_encode($options);
 
-			$options = preg_replace('~("initComplete":)"([^\"]+)"~', '$1$2', $options);
 			$options = preg_replace('~("createdRow":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("drawCallback":)"([^\"]+)"~', '$1$2', $options);
 			$options = preg_replace('~("footerCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("formatNumber":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("headerCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("infoCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("initComplete":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("preDrawCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("rowCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("stateLoadCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("stateLoadParams":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("stateLoaded":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("stateSaveCallback":)"([^\"]+)"~', '$1$2', $options);
+			$options = preg_replace('~("stateSaveParams":)"([^\"]+)"~', '$1$2', $options);
 
 			return sprintf($template, $selector, $options);
 		}
