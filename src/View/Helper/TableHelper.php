@@ -37,9 +37,10 @@
 			$options += [
 			];
 
-			if (!empty($options['language']) and is_string($options['language'])) {
-				if (!preg_match('~^\{.*\}$~', $options['language']) and is_file(DataTablesPlugin::I18N . $options['language'] . '.json')) {
-					$options['language'] = ['url' => $this->Url->build('/data_tables/i18n/' . $options['language'] . '.json')];
+			$language = $options['language'] ?? '';
+			if (is_string($language) and preg_match('~^[a-z\-]{2,}$~i', $language)) {
+				if (is_file(DataTablesPlugin::I18N . $language . '.json')) {
+					$options['language'] = ['url' => $this->Url->build('/data_tables/i18n/' . $language . '.json')];
 				}
 			}
 
