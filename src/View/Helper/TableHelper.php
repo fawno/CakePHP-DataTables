@@ -38,14 +38,13 @@
 			];
 
 			if (!empty($options['language']) and is_string($options['language'])) {
-					if (!preg_match('~^\{.*\}$~', $options['language']) and is_file(DataTablesPlugin::I18N . $options['language'] . '.json')) {
-							$options['language'] = file_get_contents(DataTablesPlugin::I18N . $options['language'] . '.json');
-							$options['language'] = json_decode($options['language'], true);
-					}
+				if (!preg_match('~^\{.*\}$~', $options['language']) and is_file(DataTablesPlugin::I18N . $options['language'] . '.json')) {
+					$options['language'] = ['url' => $this->Url->build('/data_tables/i18n/' . $options['language'] . '.json')];
+				}
 			}
 
 			if (isset($options['footerCallback'])) {
-					$options['footerCallback'] = preg_replace('~[\r\n\t]~', '', $options['footerCallback']);
+				$options['footerCallback'] = preg_replace('~[\r\n\t]~', '', $options['footerCallback']);
 			}
 			$options = json_encode($options);
 

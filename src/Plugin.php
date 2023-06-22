@@ -46,7 +46,7 @@ class DataTablesPlugin extends BasePlugin
     {
         $routes->plugin(
             'DataTables',
-            ['path' => '/data-tables'],
+            ['path' => '/data_tables'],
             function (RouteBuilder $builder) {
                 // Add custom routes here
 
