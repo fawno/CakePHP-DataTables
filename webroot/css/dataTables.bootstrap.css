@@ -1,15 +1,18 @@
-.table.dataTable thead th.sorting::after,
-.table.dataTable thead th.sorting_asc::after,
-.table.dataTable thead th.sorting_desc::after,
-.table.dataTable thead th.sorting_asc_disabled::after,
-.table.dataTable thead th.sorting_desc_disabled::after { bottom: 0px; }
+table.table.dataTable { margin-top: 6px; margin-bottom: 6px; }
+table.table.dataTable thead th.sorting::after,
+table.table.dataTable thead th.sorting_asc::after,
+table.table.dataTable thead th.sorting_desc::after,
+table.table.dataTable thead th.sorting_asc_disabled::after,
+table.table.dataTable thead th.sorting_desc_disabled::after { bottom: 0px; }
+table.table.dataTable th { text-align: inherit; padding: 1px 4px; }
+table.table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order { right: 4px; }
 
-.dataTables_wrapper .dataTables_filter { padding: 4px 0px; font-size: 100%; font-weight: bold; }
-.dataTables_wrapper .dataTables_filter > label { margin: 0px; }
-.dataTables_wrapper .dataTables_info { font-size: 100%; font-weight: bold; float: left; }
-.dataTables_wrapper .dataTables_info span { color: green; font-size: 110%; }
-.dataTables_wrapper .dataTables_info span.red { color: red; }
+div.dt-container div.dt-search { padding: 4px 0px; font-size: 100%; text-align: right; }
+div.dt-container div.dt-search > label { margin: 0px; }
+div.dt-container div.dt-info { font-size: 100%; padding-top: 8px; font-weight: bold; float: left; }
+div.dt-container div.dt-info span { color: green; font-size: 110%; }
+div.dt-container div.dt-info span.red { color: red; }
 
-.dataTables_wrapper .wrapper-sticky .dataTables_info { position: sticky; top: 29px; z-index: 1; }
-.dataTables_wrapper .wrapper-sticky .dataTables_filter { position: sticky; top: 29px; background-color: white; }
-.dataTables_wrapper .wrapper-sticky .table-sticky > thead { top: 67px; }
+div.dt-container .wrapper-sticky .dt-info { position: sticky; top: 29px; z-index: 1; }
+div.dt-container .wrapper-sticky .dt-search { position: sticky; top: 29px; background-color: white; }
+div.dt-container .wrapper-sticky .table-sticky > thead { top: 67px; }

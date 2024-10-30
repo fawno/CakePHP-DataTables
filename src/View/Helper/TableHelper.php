@@ -23,9 +23,9 @@
 		public function getTags ($block = null, string $theme = 'DataTables.dataTables.bootstrap') : string {
 			$out = '';
 
-			$out .= $this->script('https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js', ['block' => $block]);
-			$out .= $this->script('https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap.min.js', ['block' => $block]);
-			$out .= $this->css('https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap.min.css', ['block' => $block,]);
+			$out .= $this->script('https://cdn.datatables.net/2.1.8/js/dataTables.min.js', ['block' => $block]);
+			$out .= $this->script('https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap.js', ['block' => $block]);
+			$out .= $this->css('https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap.min.css', ['block' => $block,]);
 			$out .= $this->css($theme ?? 'DataTables.dataTables.bootstrap', ['block' => $block]);
 
 			return $out;
