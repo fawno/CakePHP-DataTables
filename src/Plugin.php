@@ -10,7 +10,9 @@ use Cake\Core\PluginApplicationInterface;
 use Cake\Http\MiddlewareQueue;
 use Cake\Routing\RouteBuilder;
 
-define('DATATABLES_ROOT', dirname(__DIR__));
+if (!defined('DATATABLES_ROOT')) {
+    define('DATATABLES_ROOT', dirname(__DIR__));
+}
 
 /**
  * Plugin for DataTables
